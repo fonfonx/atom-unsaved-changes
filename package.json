@@ -1,7 +1,7 @@
 {
   "name": "atom-unsaved-changes",
   "main": "./lib/atom-unsaved-changes",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "description": "Show unsaved changes in active editor",
   "keywords": [],
   "activationCommands": {
@@ -11,6 +11,9 @@
   "license": "MIT",
   "engines": {
     "atom": ">=0.174.0 <2.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/fonfonx/atom-unsaved-changes/issues"
   },
   "dependencies": {
     "diff": "^1.4.0",
