@@ -1,7 +1,7 @@
 {
   "name": "atom-unsaved-changes",
   "main": "./lib/atom-unsaved-changes",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Show unsaved changes in active editor",
   "keywords": [],
   "activationCommands": {
