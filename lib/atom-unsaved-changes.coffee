@@ -53,7 +53,7 @@ module.exports = AtomUnsavedChanges =
             else
               # Promise resolves to null if read error code is 'ENOENT'
               throw new Error 'File not found'
-          .fail (error) =>
+          .catch (error) =>
             @displayMessage error, 'context'
     else
       # Should be unreachable, but can be tested
