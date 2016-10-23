@@ -2,7 +2,7 @@
 {MessagePanelView, PlainMessageView} = require 'atom-message-panel'
 {diffLines} = require 'diff'
 
-module.exports = UnsavedChanges =
+module.exports = AtomUnsavedChanges =
   subscriptions: null
   messagePanelView: null
 
@@ -14,11 +14,11 @@ module.exports = UnsavedChanges =
     # Register our command.
     # Note the `atom` global is always available
     @subscriptions.add atom.commands.add 'atom-workspace',
-      'unsaved-changes:show': => @show()
+      'atom-unsaved-changes:show': => @show()
 
     # Diff results shown in this panel
     @messagePanelView = new MessagePanelView
-      title: '<span class="unsaved-changes-context">Unsaved Changes</span>'
+      title: '<span class="atom-unsaved-changes-context">Atom Unsaved Changes</span>'
       rawTitle: true
     @messagePanelView.attach()
 
@@ -53,7 +53,7 @@ module.exports = UnsavedChanges =
             else
               # Promise resolves to null if read error code is 'ENOENT'
               throw new Error 'File not found'
-          .fail (error) =>
+          .catch (error) =>
             @displayMessage error, 'context'
     else
       # Should be unreachable, but can be tested
@@ -130,7 +130,7 @@ module.exports = UnsavedChanges =
   displayMessage: (msg, className) ->
     @messagePanelView.add new PlainMessageView
       message: msg
-      className: 'unsaved-changes-' + className
+      className: 'atom-unsaved-changes-' + className
 
   resetPanel: ->
     @messagePanelView.clear()

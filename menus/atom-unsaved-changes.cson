@@ -1,19 +1,19 @@
 'context-menu':
   'atom-text-editor': [
     {
-      'label': 'Unsaved Changes'
-      'command': 'unsaved-changes:show'
+      'label': 'Atom Unsaved Changes'
+      'command': 'atom-unsaved-changes:show'
     }
   ]
 'menu': [
   {
     'label': 'Packages'
     'submenu': [
-      'label': 'Unsaved Changes'
+      'label': 'Atom Unsaved Changes'
       'submenu': [
         {
           'label': 'Show'
-          'command': 'unsaved-changes:show'
+          'command': 'atom-unsaved-changes:show'
         }
       ]
     ]
