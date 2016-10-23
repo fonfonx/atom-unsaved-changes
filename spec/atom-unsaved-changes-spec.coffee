@@ -41,7 +41,7 @@ describe "AtomUnsavedChanges", ->
     it "should show appropriate message in the panel if active text editor is unchanged", ->
       waitsForPromise ->
         atom.workspace.open('test.txt')
-          .then (o) ->atom
+          .then (o) ->
             editor = o
 
       runs ->
@@ -53,7 +53,7 @@ describe "AtomUnsavedChanges", ->
 
   describe "parseDiff", ->
     [editor, oldText, newText] = []
-atom
+
     beforeEach ->
       waitsForPromise ->
         atom.workspace.open('test.txt')
@@ -118,7 +118,7 @@ atom
         panelMessage = workspaceElement.querySelectorAll '.panel-body .atom-unsaved-changes-context'
         expect(panelMessage[0].textContent).toEqual '0002: peanuts\n0003: were\n0004: walking'
 
-        panelMessage = workspaceElement.queatomrySelector '.panel-body .atom-unsaved-changes-add'
+        panelMessage = workspaceElement.querySelector '.panel-body .atom-unsaved-changes-add'
         expect(panelMessage.textContent).toEqual '0005: slowly,\n0006: methodically'
 
         panelMessage = workspaceElement.querySelectorAll '.panel-body .atom-unsaved-changes-context'
@@ -136,7 +136,7 @@ atom
       runs ->
         AtomUnsavedChanges.parseDiff oldText, newText
 
-        panelMessage = workspaceElement.quatomerySelectorAll '.panel-body .atom-unsaved-changes-context'
+        panelMessage = workspaceElement.querySelectorAll '.panel-body .atom-unsaved-changes-context'
         expect(panelMessage[0].textContent).toEqual '0001: Two\n0002: peanuts'
 
         panelMessage = workspaceElement.querySelector '.panel-body .atom-unsaved-changes-remove'

@@ -23,6 +23,8 @@ In Command Palette, type `Atom Unsaved Changes`
 
 Keybinding, `ctrl + alt + u` (Mac: `cmd + alt + u`)
 
+In order to close the panel showing the changes, just press `escape`
+
 Adds will be shown with a green background, removes with a red background.
 A few lines of surrounding unchanged text are also shown for context.
 A yellow line separates hunks.
