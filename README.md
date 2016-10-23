@@ -1,5 +1,4 @@
-# Unsaved Changes
-
+# Atom Unsaved Changes
 
 Shows changes in your active buffer via a panel at the bottom of the editor.
 Similar to "Show Unsaved Changes" in Sublime Text.
@@ -10,17 +9,17 @@ Similar to "Show Unsaved Changes" in Sublime Text.
 
 Run the following command:
 ```sh
-apm install unsaved-changes
+apm install atom-unsaved-changes
 ```
-Or find the package in **Settings** &rarr; **Install** and search for "**unsaved-changes**"
+Or find the package in **Settings** &rarr; **Install** and search for "**atom-unsaved-changes**"
 
 ## Usage
 
-In Menu, `Packages => Unsaved Changes => Show`
+In Menu, `Packages => Atom Unsaved Changes => Show`
 
-In context-menu, `Unsaved Changes`
+In context-menu, `Atom Unsaved Changes`
 
-In Command Palette, type `Unsaved Changes`
+In Command Palette, type `Atom Unsaved Changes`
 
 Keybinding, `ctrl + alt + u` (Mac: `cmd + alt + u`)
 
@@ -32,4 +31,6 @@ A yellow line separates hunks.
 
 ## License
 
-[MIT](LICENSE.md) © Ge-Bra
+This repository has been forked from [unsaved-changes](https://github.com/Ge-Bra/unsaved-changes) because it was not maintained any more, and in order to correct bugs.
+
+[MIT](LICENSE.md) © fonfonx

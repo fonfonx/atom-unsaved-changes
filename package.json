@@ -1,13 +1,13 @@
 {
-  "name": "unsaved-changes",
-  "main": "./lib/unsaved-changes",
+  "name": "atom-unsaved-changes",
+  "main": "./lib/atom-unsaved-changes",
   "version": "0.1.0",
   "description": "Show unsaved changes in active editor",
   "keywords": [],
   "activationCommands": {
-    "atom-workspace": "unsaved-changes:show"
+    "atom-workspace": "atom-unsaved-changes:show"
   },
-  "repository": "https://github.com/Ge-Bra/unsaved-changes",
+  "repository": "https://github.com/fonfonx/atom-unsaved-changes",
   "license": "MIT",
   "engines": {
     "atom": ">=0.174.0 <2.0.0"
