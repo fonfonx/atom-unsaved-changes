@@ -16,6 +16,9 @@ module.exports = AtomUnsavedChanges =
     @subscriptions.add atom.commands.add 'atom-workspace',
       'atom-unsaved-changes:show': => @show()
 
+    @subscriptions.add atom.commands.add 'atom-workspace',
+      'atom-unsaved-changes:close': => @close()
+
     # Diff results shown in this panel
     @messagePanelView = new MessagePanelView
       title: '<span class="atom-unsaved-changes-context">Atom Unsaved Changes</span>'
@@ -27,6 +30,9 @@ module.exports = AtomUnsavedChanges =
 
   serialize: ->
     undefined
+
+  close: ->
+    @messagePanelView.close()
 
   show: ->
     @resetPanel()
