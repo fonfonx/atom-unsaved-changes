@@ -56,7 +56,7 @@ describe "AtomUnsavedChanges", ->
 
     beforeEach ->
       waitsForPromise ->
-        atom.workspace.open('test.txt')
+        atom.workspace.open('/home/ubuntu/atom-unsaved-changes/spec/test.txt')
           .then (o) ->
             editor = o
             oldText = editor.buffer.getText()
