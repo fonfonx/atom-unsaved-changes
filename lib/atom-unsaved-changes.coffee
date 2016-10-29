@@ -14,16 +14,15 @@ module.exports = AtomUnsavedChanges =
     # Register our command.
     # Note the `atom` global is always available
     @subscriptions.add atom.commands.add 'atom-workspace',
-      'atom-unsaved-changes:show': => @show()
-
-    @subscriptions.add atom.commands.add 'atom-workspace',
-      'atom-unsaved-changes:close': => @close()
+      'atom-unsaved-changes:show': => @toggle()
 
     # Diff results shown in this panel
     @messagePanelView = new MessagePanelView
-      title: '<span class="atom-unsaved-changes-context">Atom Unsaved Changes</span>'
       rawTitle: true
+      title: '<span class="atom-unsaved-changes-context">Atom Unsaved Changes</span>'
     @messagePanelView.attach()
+    # initialize panel as invisible
+    @messagePanelView.panel.visible = false
 
   deactivate: ->
     @subscriptions.dispose()
@@ -31,12 +30,17 @@ module.exports = AtomUnsavedChanges =
   serialize: ->
     undefined
 
+  toggle: ->
+    if @messagePanelView.panel.visible
+      @close()
+    else
+      @show()
+
   close: ->
     @messagePanelView.close()
 
   show: ->
     @resetPanel()
-
     if editor = atom.workspace.getActiveTextEditor()
       if editor.getTitle() is 'untitled'
         @displayMessage 'Unsaved file!', 'context'
