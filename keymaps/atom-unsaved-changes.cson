@@ -1,3 +1,2 @@
 'atom-workspace':
   'ctrl-alt-u': 'atom-unsaved-changes:show'
-  'escape': 'atom-unsaved-changes:close'
