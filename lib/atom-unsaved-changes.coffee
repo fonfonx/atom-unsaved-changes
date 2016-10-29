@@ -79,11 +79,17 @@ module.exports = AtomUnsavedChanges =
     for part, index in diff
       if part.added
         message = @insertLineNumbers part.value, lineCount
-        @displayMessage message, 'add'
+        if part.value.charAt(part.value.length - 2) is ' '
+          @displayMessage message, 'add-empty'
+        else
+          @displayMessage message, 'add'
         lineCount += part.count
       else if part.removed
         message = @insertLineNumbers part.value
-        @displayMessage message, 'remove'
+        if part.value.charAt(part.value.length - 2) is ' '
+          @displayMessage message, 'remove-empty'
+        else
+          @displayMessage message, 'remove'
       else
         message = @insertLineNumbers part.value, lineCount
 
