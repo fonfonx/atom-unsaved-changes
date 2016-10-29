@@ -1,7 +1,8 @@
 # Atom Unsaved Changes
 
-[![Plugin installs](https://img.shields.io/apm/dm/atom-unsaved-changes.svg?style=flat-square)](https://atom.io/packages/atom-unsaved-changes)
-[![Package version](https://img.shields.io/apm/v/atom-unsaved-changes.svg?style=flat-square)](https://atom.io/packages/atom-unsaved-changes)
+[![Plugin installs](https://img.shields.io/apm/dm/atom-unsaved-changes.svg?style=flat)](https://atom.io/packages/atom-unsaved-changes)
+[![Package version](https://img.shields.io/apm/v/atom-unsaved-changes.svg?style=flat)](https://atom.io/packages/atom-unsaved-changes)
+[![CircleCI](https://circleci.com/gh/fonfonx/atom-unsaved-changes/tree/master.svg?style=shield)](https://circleci.com/gh/fonfonx/atom-unsaved-changes/tree/master)
 
 Shows changes in your active buffer via a panel at the bottom of the editor.
 Similar to "Show Unsaved Changes" in Sublime Text.
@@ -34,7 +35,7 @@ Adds will be shown with a green background, removes with a red background.
 A few lines of surrounding unchanged text are also shown for context.
 A yellow line separates hunks.
 
-**Note: Compares whitespace.**
+**Note: Compares whitespace.** If a line ends with a whitespace a symbol &#8709; is appended at the end of the line.
 
 ## License
 
