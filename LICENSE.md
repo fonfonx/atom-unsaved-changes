@@ -1,4 +1,6 @@
-Copyright (c) 2016 fonfonx
+This software is a modified version of unsaved-changes by Ge-Bra whose license is as follows:
+
+Copyright (c) 2015 Ge-Bra
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the

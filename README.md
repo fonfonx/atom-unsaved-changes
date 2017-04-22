@@ -40,5 +40,3 @@ A yellow line separates hunks.
 ## License
 
 This repository has been forked from [unsaved-changes](https://github.com/Ge-Bra/unsaved-changes) because it was not maintained any more, and in order to correct bugs.
-
-[MIT](LICENSE.md) © fonfonx
